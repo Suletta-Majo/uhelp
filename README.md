@@ -99,6 +99,9 @@ Now you can choose from 5 options: default, retro, retro2, simple, fruits
 ![simple style](images/simple_style.png) ![fruits style](images/fruits_style.png)  
 
 
+<img alt="default style" src='./images/default_style.png' width=50%><img alt="retro2 style" src='./images/retro2_style.png' width=50%>
+
+
 ***
 
 &nbsp;
