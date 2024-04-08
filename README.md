@@ -1,4 +1,6 @@
-<h1 align="center">Welcome to Your own help 👋</h1>
+![uhelp banner](imagew/uhelp_banner.png)
+
+<h1 align="center">uhelp <h2>-Welcome to Your own help-</h2> 👋</h1>
 <p>
 <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
   <img alt="Python" src="https://img.shields.io/badge/-Python-F2C63C.svg?logo=python&style=for-the-badge">
@@ -89,6 +91,12 @@ uhelp -r [command name]
 uhelp -v [theme name]
 ```
 Now you can choose from 5 options: default, retro, retro2, simple, fruits
+
+
+![default style](images/default_style.png)  
+
+![retro style](images/retro_style.png) ![retro2 style](images/retro2_style.png)  
+![simple style](images/simple_style.png) ![fruits style](images/fruits_style.png)  
 
 
 ***
