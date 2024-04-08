@@ -1,4 +1,4 @@
-![uhelp banner](imagew/uhelp_banner.png)
+![uhelp banner](images/uhelp_banner.png)
 
 <h1 align="center">uhelp <h2>-Welcome to Your own help-</h2> 👋</h1>
 <p>
