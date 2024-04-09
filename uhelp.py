@@ -30,7 +30,7 @@ import logging
 
 # Choosing a path when building a .deb package
 # python(one directory) or deb(deb package style)
-pathtype = "deb"
+pathtype = "python"
 
 # for adjust binary compile path
 if pathtype == "python":
@@ -196,8 +196,7 @@ THEMES = [
         description="fruits theme",
         tags=["fruits"],
         styles={
-            "title": "bold #340704 on #f7d3a6",
-            #"title": "bold #FAE9E8 on #9F66EA", refd groslip
+            "title": "bold #E25666",
             "oldusage": "blue",
             "usage": "bold #590B1A on #E95B6B",
             "strong": "bold blue",
@@ -304,6 +303,8 @@ THEMES = [
         },
     ),
 ]
+
+            #"title": "bold #FAE9E8 on #9F66EA",Referenced pypi software glosslip
 
 
 def get_args():

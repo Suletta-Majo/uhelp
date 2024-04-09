@@ -35,6 +35,6 @@ markdown.strong = bold
 markdown.text = none
 oldusage = blue
 strong = bold blue
-title = bold #340704 on #f7d3a6
+title = bold #e25666
 usage = bold #590b1a on #e95b6b
 warning = bold magenta

@@ -1,6 +1,6 @@
 ![uhelp banner](images/uhelp_banner.png)
 
-<h1 align="center">uhelp <h2>-Welcome to Your own help-</h2> 👋</h1>
+<h1 align="center">-Welcome to Your own help- 👋</h1>
 <p>
 <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
   <img alt="Python" src="https://img.shields.io/badge/-Python-F2C63C.svg?logo=python&style=for-the-badge">
@@ -14,17 +14,17 @@
 > *and you can also set it to be displayed at the same time as your own.*  
 
 
-##NOTE : *Now Making*
->**The package has not been completed yet for installation, please wait.**  
->*If you want to try it even if it's not a package, please try the explanation a little ahead* **git clone method**
+## NOTE : *Now Making*
+> **The package has not been completed yet for installation, please wait.**  
+> *If you want to try it even if it's not a package, please try the explanation a little ahead* **git clone method**
 
 &nbsp;
 ## ~~Install~~
 Ways 1 using pip  
 
-~~```sh
+```sh
 pip install uhelp
-```~~  
+```  
 
 Ways 2 using .deb  
 *choose Debian deb package your CPU architecture*  
@@ -49,7 +49,6 @@ In that directory you can run like
 python3 ./uhelp.py ls
 ```  
 
-You can use it from anywhere if you create bash or zsh alias with "uhelp" or "uh"  
 
 ```sh
 uhelp ls
@@ -98,8 +97,6 @@ Now you can choose from 5 options: default, retro, retro2, simple, fruits
 ![retro style](images/retro_style.png) ![retro2 style](images/retro2_style.png)  
 ![simple style](images/simple_style.png) ![fruits style](images/fruits_style.png)  
 
-
-<img alt="default style" src='./images/default_style.png' width=50%><img alt="retro2 style" src='./images/retro2_style.png' width=50%>
 
 
 ***
