@@ -91,8 +91,9 @@ uhelp -v [theme name]
 ```
 Now you can choose from 5 options: default, retro, retro2, simple, fruits
 
-| default                                                                      |
-| ![default style](images/default_style.png)                                   |
+default
+![default style](images/default_style.png)  
+
 | retro                                | retro2                                |
 | ![retro style](images/retro_style.png)| ![retro2 style](images/retro2_style.png)|
 | simple                               |fruits                                 |
