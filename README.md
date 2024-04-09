@@ -94,11 +94,13 @@ Now you can choose from 5 options: default, retro, retro2, simple, fruits
 default
 ![default style](images/default_style.png)  
 
-| -------------------------------------| ------------------------------------- |
-
 | retro                                | retro2                                |
-| ![retro style](images/retro_style.png)| ![retro2 style](images/retro2_style.png)|
+
+| -------------------------------------| ------------------------------------- |
+| ![retro style](images/retro_style.png)| ![retro2 style](images/retro2_style.png)|  
+&nbsp;
 | simple                               |fruits                                 |
+| -------------------------------------| ------------------------------------- |
 | ![simple style](images/simple_style.png)| ![fruits style](images/fruits_style.png)|  
 
 
