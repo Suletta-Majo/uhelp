@@ -96,7 +96,7 @@ default
 
 | retro                                | retro2                                |
 | -------------------------------------| ------------------------------------- |
-| ![retro style](images/retro_style.png)| ![retro2 style](images/retro2_style.png)|  
+|![retro style](images/retro_style.png)| ![retro2 style](images/retro2_style.png)|  
 
 | simple                               |fruits                                 |
 | -------------------------------------| ------------------------------------- |
@@ -132,7 +132,7 @@ To view choose on  prompt 'no'
 
 Give a ⭐️ if this project helped you!
 
-appendix: [A very useful tools used to create this page!!](https://github.com/Suletta-Majo/uhelp/appendix.md) 
+appendix: [A very useful tools used to create this page!!](appendix.md) 
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
