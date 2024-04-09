@@ -764,21 +764,21 @@ def formsout(arg1, arg2, arg3):
             # usr hit or bas hit?
             if whit == 0:
 
-                console.print(Panel(bdoc, style='usage', title=adoc, title_align='left'))
+                console.print(Panel.fit(bdoc, style='usage', title=adoc, title_align='left'))
 
                 console.print(f"\n your database - total:{len(usr)}", ".", justify="right", style='usage', highlight=False)
             elif whit == 1:
 
-                console.print(Panel(bdoc, style='usage', title=adoc, title_align='left'))
+                console.print(Panel.fit(bdoc, style='usage', title=adoc, title_align='left'))
 
 
                 console.print(f"\n \[basic dictionary] - total:{len(bas)}", ".", justify="right", style='usage', highlight=False)
             elif whit == 3:  # tldr mode
-                console.print(Panel(bdoc, style='usage',   title=adoc, title_align='left'))
+                console.print(Panel.fit(bdoc, style='usage',   title=adoc, title_align='left'))
                 console.print(f"\n \[from tldr {resdict}]", ".", justify="right", style='usage', highlight=False)
 
             else:  # whit2 for sleepmemo
-                console.print(Panel(bdoc, style='usage', title=adoc, title_align='left'))
+                console.print(Panel.fit(bdoc, style='usage', title=adoc, title_align='left'))
 
 
         case 'retro2':  # format using retro style
@@ -790,20 +790,20 @@ def formsout(arg1, arg2, arg3):
 
             # usr hit or bas hit?
             if whit == 0:
-                console.print(Panel(bdoc,  style='usage', title=adoc, title_align='left'))
+                console.print(Panel.fit(bdoc,  style='usage', title=adoc, title_align='left'))
 
                 console.print(f"\n your database - total:{len(usr)}", ".", justify="right", style='usage', highlight=False)
             elif whit == 1:
-                console.print(Panel(bdoc, style='usage', title=adoc, title_align='left'))
+                console.print(Panel.fit(bdoc, style='usage', title=adoc, title_align='left'))
 
                 console.print(f"\n \[basic dictionary] - total:{len(bas)}", ".", justify="right", style='usage', highlight=False)
             elif whit == 3:  # tldr mode
-                console.print(Panel(bdoc, style='usage', title=adoc, title_align='left'))
+                console.print(Panel.fit(bdoc, style='usage', title=adoc, title_align='left'))
 
                 console.print(f"\n \[from tldr {resdict}]", ".", justify="right", style='usage', highlight=False)
 
             else:  # whit2 for sleepmemo
-                console.print(Panel(bdoc, style='usage', title=adoc, title_align='left'))
+                console.print(Panel.fit(bdoc, style='usage', title=adoc, title_align='left'))
 
 
 

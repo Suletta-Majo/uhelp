@@ -93,9 +93,12 @@ Now you can choose from 5 options: default, retro, retro2, simple, fruits
 
 
 ![default style](images/default_style.png)  
-
-![retro style](images/retro_style.png) ![retro2 style](images/retro2_style.png)  
-![simple style](images/simple_style.png) ![fruits style](images/fruits_style.png)  
+| retro                                | retro2                                |
+| -------------------------------------|-------------------------------------- |
+| ![retro style](images/retro_style.png)| ![retro2 style](images/retro2_style.png)|
+| simple                               |fruits                                 |
+| -------------------------------------|-------------------------------------- |
+| ![simple style](images/simple_style.png)| ![fruits style](images/fruits_style.png)|  
 
 
 
@@ -126,6 +129,8 @@ To view choose on  prompt 'no'
 ## Show your support
 
 Give a ⭐️ if this project helped you!
+
+appendix: [A very useful tools used to create this page!!](https://github.com/Suletta-Majo/uhelp/appendix.md) 
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
