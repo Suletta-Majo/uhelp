@@ -4,7 +4,7 @@
 *AI generate Image.I'm scared of the future...*  
 
 ## title banner front logo  
-*I used the* Mark Maker *from the following web site*:
+*I used the* Mark Maker *from the following web site*:  
 [Emblemmatic Mark Maker](https://emblemmatic.org/markmaker/#/)  
 *Just enter a string and it will give you a variety of suggestions at once,*  
 *and you can easily download PNG or SVG with transparency.*  

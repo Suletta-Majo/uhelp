@@ -423,10 +423,10 @@ def dbzeroinit():
 #dbzeroinit()
 
 
-def jload():  # what is this function? may be not need
-    with open('filename.json', 'r') as file:
+def jload(repath):  # what is this function? may be not need
+    with open(repath, 'r') as file:
         dict_data = json.load(file)
-    print(f"{dict_data[-1]=}")
+    # print(f"{dict_data[-1]=}")
     return dict_data
 
 def backupmenu(cmenu):
@@ -486,13 +486,12 @@ def backupmenu(cmenu):
         \n                 ↓ ↓ ↓\
         \n uhelp.json[blue]\[]\[][green]\[][/green]\[][green]\[]\[][/green]\[][/blue]\
         \n \
-        \n  [dim][italic]case If use other people's table data additional to own data\
-        \n  behavior: it using the tinydb upsert method[/][/]\
+        \n  [dim][italic]case If use other people's table data additional to own data[/][/]\
         \n              ")
 
-        yntrunc = Prompt.ask("which restore ways choose? 1 = update / 2 = upsert", choices=["1", "2"])
+        ynways = Prompt.ask("which restore ways choose? 1 = update / 2 = upsert", choices=["1", "2"])
 
-        if yntrunc == "1":
+        def askrestorepath():
             # pathlib expanduser() understund home ~/
             lbexists = False
             while not lbexists:
@@ -508,30 +507,67 @@ def backupmenu(cmenu):
                     if pag == "y":
                         pass
                     elif pag == "n":
+                        lbexists = False
                         break
+            return LBP,lbexists
+
+
+
+        if ynways == "1":  # simple overwrite usr table
 
             # restore function
             logging.debug("restore function 1")
-            #usr.truncate()
-            print(f"user table truncated. Number of registered items: {len(usr)}")
-            print(f"restored usertable from {LBP} Number of registere  d items: {len(usr)}")
 
-        elif yntrunc == "2":
-            print("here upsert function")
+            CLBP = askrestorepath()
 
-            #usr.truncate()
-            print(f"user table truncated... Number of registered items: {len(usr)}")
+
+            if CLBP[1]:
+
+                # restore function
+                usr.truncate()
+                print(f"user table truncated. Number of registered items: {len(usr)}")
+
+                # belows I want to use update instead of upsert,
+                # but the difference is whether I truncate or not, so I'll go with this for now
+                rt = jload(CLBP[0])
+                for i in range(len(rt)):
+                    aak = rt[i].keys()
+                    aav = rt[i].values()
+                    usr.upsert(rt[i], Query().aak==aav)
+                console.print(f"[blue]success restore usr table[/] {len(usr)=}")
+
+                console.print(f"[blue]restored usertable from {CLBP[0]} Number of registered items[/]: {len(usr)}")
+            else:
+                console.print(f"[red]abort[/] restore function wrong path {len(usr)=}")
+
+        elif ynways == "2":  # upsert usr table
+            logging.debug("restore function 2")
+            CLBP = askrestorepath()
+
+            User = Query()
+            rt = jload(CLBP[0])
+
+            """ example
+            # return dict
+            print(usr.search(Query()['command']==rt[0]['command']))
+            # return Bool q name==John style
+            print(usr.contains(Query()['command']==rt[0]['command']))
+            """
+
+            for i in range(len(rt)):
+                cnm = rt[i]['command']
+                if usr.contains(Query()['command']==rt[i]['command']):  # bool
+                    console.print(f"[yellow]{cnm}[/] is exists. [red]skip[/]")
+                else:  # If the command name does not exist
+                    # insert item
+                    console.print(f"[green]{cnm}[/] is not exists [blue]insert[/] ")
+
+            console.print(f"[blue]success restore usr table ([red]upsert method[/])[/] {len(usr)=}")
+            #print(usr.all())
+
         else:
             print(f"error Prompt.ask")
 
-            """
-            rt = jload()
-            for i in range(len(rt)):
-                aak = rt[i].keys()
-                aav = rt[i].values()
-                usr.upsert(rt[i], Query().aak==aav)
-            print(f"test restore usr table {len(usr)=}")
-            """
         return
 
     # backup or restore
