@@ -43,8 +43,12 @@ apt install ./uhelp-1.0.deb
 ```
 
 
-## git clone  
-Go to the directory you want to clone and use mkdir uhelpgit if necessary  
+## git clone (for debug, Contribute)  
+Be sure to change the pathstyle = "xxx" at the beginning of
+ uhelp.py to "python".
+for Developers, contributors, and anyone wanting to tweak the build  
+
+Create a directory for that purpose, go into it, and then  
 
 ```sh
 git clone https://github.com/Suletta-Majo/uhelp.git
@@ -55,13 +59,6 @@ In that directory you can run like
 ```sh
 python3 ./uhelp.py ls
 ```  
-
-
-```sh
-uhelp ls
-```
-
-
 
 
 &nbsp;
