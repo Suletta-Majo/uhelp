@@ -46,7 +46,7 @@ def main():
 
     # Choosing a path when building a .deb or pip package
     # python(one directory) or deb(deb package style) or pip(module dir)
-    pathtype = "python"
+    pathtype = "pip"
 
     # for adjust pip or binary compile path
     if pathtype == "python":
