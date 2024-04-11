@@ -80,6 +80,7 @@ def main():
     # Reject execution from outside the program directory
     # (because it creates uhelp.ini etc. in the current directory that is unrelated to the program, But I wonder why, it seems strange)
     if pathtype == "python" and currentdir_chk.exists() == False:
+        print(f"{pathtype=} {currentdir_chk.exists()=}")
         print("Can only run from the program directory with uhelp.py")
         return  # how to finish main
 
