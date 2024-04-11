@@ -19,17 +19,25 @@
 > *If you want to try it even if it's not a package, please try the explanation a little ahead* **git clone method**
 
 &nbsp;
-## ~~Install~~
+## Install
 Ways 1 using pip  
 
+Package and install directly from this repository with pip
 ```sh
-pip install uhelp
+pip install git+https://github.com/Suletta-Majo/uhelp.git
 ```  
+
+Regular pip command Use the one registered on PYPI
+##### *in preparation*
+~~```sh
+pip install uhelp
+```~~
+in preparation
 
 Ways 2 using .deb  
 *choose Debian deb package your CPU architecture*  
 
-~~[x64](https://)~~ [arm64](https://) 
+~~[x64](https://)~~&nbsp;/&nbsp;[arm64](https://) 
 
 ```sh
 apt install ./uhelp-1.0.deb
@@ -73,19 +81,19 @@ uhelp ls
 &nbsp;
 
 
-###Edit your own help item
+### Edit your own help item
 ```
 uhelp -e [command name]
 ```
 The text editor opens and you can edit it with reference to the description.
 
 
-###Remove your own help item
+### Remove your own help item
 ```
 uhelp -r [command name]
 ```
 
-####Change Theme
+#### Change Theme
 ```
 uhelp -v [theme name]
 ```

@@ -1,4 +1,3 @@
-# pyproject.tomlのビルドツールを指定します
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
