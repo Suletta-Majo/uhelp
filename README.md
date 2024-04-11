@@ -1,6 +1,6 @@
 ![uhelp banner](images/uhelp_banner.png)
 
-<h1 align="center">-Welcome to Your own help- 👋</h1>
+<h2 align="center"> Welcome to Your own help 👋</h2>
 <p>
 <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
   <img alt="Python" src="https://img.shields.io/badge/-Python-F2C63C.svg?logo=python&style=for-the-badge">
@@ -36,14 +36,14 @@ pip install uhelp
 Ways 2 using .deb  
 *choose Debian deb package your CPU architecture*  
 
-~~[x64](https://)~~&nbsp;/&nbsp;[arm64](https://) 
+~~[x64](https://)~~ &nbsp;/&nbsp;[arm64](https://) 
 
 ```sh
 apt install ./uhelp-1.0.deb
 ```
 
 
-## git clone (for debug, Contribute)  
+### git clone (for debug, for Contribute)  
 Be sure to change the pathstyle = "xxx" at the beginning of
  uhelp.py to "python".
 for Developers, contributors, and anyone wanting to tweak the build  
@@ -70,10 +70,9 @@ show your command reference below example ls
 uhelp ls
 ```
 *priority is User Dictionary > Built-in Dictionary*
+
 &nbsp;
 
-  <img alt="showing command result" src="https://img.shields.io/badge/-Python-F2C63C.svg?logo=python&style=for-the-badge">
-</p>
 &nbsp;
 
 
@@ -106,6 +105,13 @@ default
 | -------------------------------------| ------------------------------------- |
 | ![simple style](images/simple_style.png)| ![fruits style](images/fruits_style.png)|  
 
+
+
+### Tldr viwer Mode
+```
+uhelp -t [command name]
+```
+Command help mode using only TLDR pages
 
 
 ***
