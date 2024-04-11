@@ -15,8 +15,8 @@
 
 
 ## NOTE : *Now Making*
-> **The package has not been completed yet for installation, please wait.**  
-> *If you want to try it even if it's not a package, please try the explanation a little ahead* **git clone method**
+> **The package has not been completed yet for Packaging, please wait.**  
+> *If you want to try it even if it's not a compiled package, please try the explanation a little ahead* **pip from git method**
 
 &nbsp;
 ## Install
@@ -28,11 +28,10 @@ pip install git+https://github.com/Suletta-Majo/uhelp.git
 ```  
 
 Regular pip command Use the one registered on PYPI
-##### *in preparation*
-~~```sh
+##### *in preparation. not work this*
+```sh
 pip install uhelp
-```~~
-in preparation
+```
 
 Ways 2 using .deb  
 *choose Debian deb package your CPU architecture*  
