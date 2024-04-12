@@ -1,12 +1,9 @@
 name: uhelp_deb_pack
 
-  on:
-    push:
-      #tags:
-      #  - 'v*.*.*'
-      branches:
-        - master
-
+on:
+  push:
+    branches:
+      - master
 
 jobs:
 
