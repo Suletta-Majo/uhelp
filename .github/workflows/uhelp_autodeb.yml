@@ -40,7 +40,7 @@ jobs:
           cp -p uhelp/uhelp.py compile/
 
       - name: change section pathstyle in uhelp.py to deb
-        run: sed -i -n -E 's/pathtype[[:blank:]]*=[[:blank:]]*).*/\1"deb"/' ./compile/uhelp.py
+        run: sed -i -n -E 's/(pathtype[[:blank:]]*=[[:blank:]]*).*/\1"deb"/' ./compile/uhelp.py
 
 
       # Build python script into a stand-alone binary file
