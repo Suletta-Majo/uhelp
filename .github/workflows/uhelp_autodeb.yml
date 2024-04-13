@@ -56,7 +56,7 @@ jobs:
 
       # here dpkg-deb --build PATH.need Fakeroot install?
       - name: dpkg deb  build
-        run: dpkg-deb —build autodeb/uhelp*/ .
+        run: dpkg-deb --build autodeb/uhelp*/ .
 
       # no attifact Instead, check with the ls command
       - name: ls check
