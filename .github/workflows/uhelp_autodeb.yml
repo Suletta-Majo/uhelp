@@ -36,7 +36,7 @@ jobs:
 
       - name: Copy Necessary items from repository
         run: |
-          cp -pr ./devdeb/* autodeb/uhelp*/
+          cp -a ./devdeb/* autodeb/uhelp*/
           cp -p uhelp/uhelp.py compile/
 
       - name: change section pathstyle in uhelp.py to deb
@@ -57,25 +57,15 @@ jobs:
           file ./build/uhelp.bin
 
       - name: Move the binary file to the deb package build directory
-        run: cp -p ./build/uhelp.bin ./autodeb/uhelp*/opt/uhelp
+        run: cp ./build/uhelp.bin ./autodeb/uhelp*/opt/uhelp/uhelp
 
-      # here dpkg-deb --build PATH.need Fakeroot install?
+      # --root-owner-group is Instead fakeroot
       - name: dpkg deb  build
-        run: dpkg-deb --build autodeb/uhelp*/ .
-
-
-      # no attifact Instead, check with the ls command
-      - name: ls check
-        run: |
-          ls -lh ./
-          ls -lh ./build
-          ls -lh ./compile
-          ls -lh ./autodeb
-          ls -lh ./autodeb/uhelp*/
+        run: dpkg-deb --root-owner-group --build autodeb/uhelp*/ .
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: my-artifact
+          name: uhelp-artifact
           path: uhelp*.deb
 
