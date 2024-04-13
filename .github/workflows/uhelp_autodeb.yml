@@ -3,7 +3,7 @@ name: uhelp_deb_pack
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
 
@@ -52,8 +52,9 @@ jobs:
 
       # identify the architecture of binary file
       - name identify the architecture of binary file
-        run: file ./build/uhelp.bin
-
+        run: |
+          sudo apt update && sudo apt install file
+          file ./build/uhelp.bin
 
       - name: Move the binary file to the deb package build directory
         run: cp -p ./build/uhelp.bin ./autodeb/uhelp*/opt/uhelp
@@ -72,12 +73,9 @@ jobs:
           ls -lh ./autodeb
           ls -lh ./autodeb/uhelp*/
 
-
-
-      # Uploads artifact
-      #- name: Upload Artifact
-      #  uses: actions/upload-artifact@v3
-      #  with:
-      #    name: x64
-      #    path: ./*.deb
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: uhelp*.deb
 
