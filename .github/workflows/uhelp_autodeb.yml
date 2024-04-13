@@ -36,10 +36,8 @@ jobs:
 
       - name: Copy Necessary items from repository
         run: |
-          ls -lh
-          echo "ls uhelp!!"
-          ls -lh uhelp/
-          cp -pr ./uhelp/uhelp/uhelp/devdeb/* autodeb/
+          cp -pr ./devdeb/* autodeb/uhelp*/
+          cp -p uhelp/uhelp.py compile/
 
       - name: change section pathstyle in uhelp.py to deb
         run: sed -i -n -e 's/pathtype = "\(.*\)/pathtype = "deb"/p' ./compile/uhelp.py
