@@ -35,7 +35,10 @@ jobs:
           mkdir -p autodeb/uhelp${{ env.RELEASE_VERSION }}/
 
       - name: Copy Necessary items from repository
-        run: cp -pr ./uhelp/devdeb/* autodeb/
+        run: |
+          ls -lh
+          ls -lh uhelp/
+          cp -pr ./uhelp/uhelp/devdeb/* autodeb/
 
       - name: change section pathstyle in uhelp.py to deb
         run: sed -i -n -e 's/pathtype = "\(.*\)/pathtype = "deb"/p' ./compile/uhelp.py
