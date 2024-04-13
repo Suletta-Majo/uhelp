@@ -51,9 +51,9 @@ jobs:
           onefile: true
 
       # identify the architecture of binary file
-      - name identify the architecture of binary file
+      - name: identify the architecture of binary file
         run: |
-          sudo apt install file
+          sudo apt update && sudo apt install file
           file ./build/uhelp.bin
 
       - name: Move the binary file to the deb package build directory
