@@ -3,7 +3,7 @@ name: uhelp_deb_pack
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
 
