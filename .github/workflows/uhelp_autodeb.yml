@@ -50,13 +50,18 @@ jobs:
           script-name: ./compile/uhelp.py
           onefile: true
 
+      # identify the architecture of binary file
+      - name identify the architecture of binary file
+        run: file ./build/uhelp.bin
+
+
       - name: Move the binary file to the deb package build directory
         run: cp -p ./build/uhelp.bin ./autodeb/uhelp*/opt/uhelp
-
 
       # here dpkg-deb --build PATH.need Fakeroot install?
       - name: dpkg deb  build
         run: dpkg-deb --build autodeb/uhelp*/ .
+
 
       # no attifact Instead, check with the ls command
       - name: ls check

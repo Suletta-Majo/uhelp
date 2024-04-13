@@ -2,7 +2,7 @@ Package: uhelp
 Version: 0.1.0
 Section: doc
 Priority: optional
-Architecture: arm64
+Architecture: amd64
 Depends:
 Maintainer: Suletta-Majo <sulettamajo@gmail.com>
 Homepage: https://github.com/Suletta-Majo/uhelp
