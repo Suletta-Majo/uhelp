@@ -19,19 +19,21 @@
 > *If you want to try it even if it's not a compiled package, please try the explanation a little ahead* **pip from git method**
 
 &nbsp;
-## Install
-Ways 1 using pip  
+## Instal
+
+Cannot be installed on Termux!Proot-Distro environment is possible
+<details> I made it with Termux and Debian, but it doesn't work with Termux.  
+(When I tried the installation in Termux, it was installed half way and I wandered around the apt or dpkg command to recover its state.  
+If possible, I'd like to explore how to make it a termux pkg as a future task.</details>
+
+Ways 1 using pip (from this repository) 
 
 Package and install directly from this repository with pip
 ```sh
 pip install git+https://github.com/Suletta-Majo/uhelp.git
 ```  
+This works in Python
 
-Regular pip command Use the one registered on PYPI
-##### *in preparation. not work this*
-```sh
-pip install uhelp
-```
 
 Ways 2 using .deb  
 *choose Debian deb package your CPU architecture*  
@@ -41,6 +43,8 @@ Ways 2 using .deb
 ```sh
 apt install ./uhelp-1.0.deb
 ```
+This is the deb package that is compiled with the OneFile option by [nuitka](https://github.com/Nuitka/Nuitka)
+
 
 
 ### git clone (for debug, for Contribute)  
@@ -59,16 +63,24 @@ In that directory you can run like
 ```sh
 python3 ./uhelp.py ls
 ```  
+...to test program
 
 
 &nbsp;
 ## Usage
 
-show your command reference below example ls
+If you install with pip, you can call it with `uh`,  
+and if you install deb with apt, you can call it with `uh` or `uhelp`.
 
+show your command reference below example `ls`
+
+```sh
+uh ls
+```  
 ```sh
 uhelp ls
 ```
+
 *priority is User Dictionary > Built-in Dictionary*
 
 &nbsp;
@@ -78,19 +90,19 @@ uhelp ls
 
 ### Edit your own help item
 ```
-uhelp -e [command name]
+uh -e [command name]
 ```
 The text editor opens and you can edit it with reference to the description.
 
 
 ### Remove your own help item
 ```
-uhelp -r [command name]
+uh -r [command name]
 ```
 
 #### Change Theme
 ```
-uhelp -v [theme name]
+uh -v [theme name]
 ```
 Now you can choose from 5 options: default, retro, retro2, simple, fruits
 
@@ -109,7 +121,7 @@ default
 
 ### Tldr viwer Mode
 ```
-uhelp -t [command name]
+uh -t [command name]
 ```
 Command help mode using only TLDR pages
 
@@ -121,10 +133,10 @@ Command help mode using only TLDR pages
 As a bonus feature, there is a function to take a short note before falling asleep
 
 ```sh
-uhelp -s i try fix suboutput function.but I think I'm going to sleep
+uh -s i try fix suboutput function.but I think I'm going to sleep
 ```
 ```sh
-uhelp -s "i try fix suboutput function.but I think I'm going to sleep"
+uh -s "i try fix suboutput function.but I think I'm going to sleep"
 ```
 Record up to 10 records
 
