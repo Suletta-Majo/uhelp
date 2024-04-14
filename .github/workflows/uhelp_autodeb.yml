@@ -3,7 +3,7 @@ name: uhelp_deb_pack
 on:
   push:
     branches:
-      - develop
+      - main
 
 jobs:
 
@@ -58,6 +58,7 @@ jobs:
 
       - name: Move the binary file to the deb package build directory
         run: |
+          ls -lh ./autodeb
           cp ./build/uhelp.bin ./autodeb/uhelp*/opt/uhelp/
           mv ./autodeb/uhelp*/opt/uhelp/uhelp.bin ./autodeb/uhelp*/opt/uhelp/uhelp
 
