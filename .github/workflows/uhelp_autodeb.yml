@@ -57,7 +57,9 @@ jobs:
           file ./build/uhelp.bin
 
       - name: Move the binary file to the deb package build directory
-        run: mv ./build/uhelp.bin ./autodeb/uhelp*/opt/uhelp/uhelp
+        run: |
+          cp ./build/uhelp.bin ./autodeb/uhelp*/opt/uhelp/
+          mv ./autodeb/uhelp*/opt/uhelp/uhelp.bin ./autodeb/uhelp*/opt/uhelp/uhelp
 
       # --root-owner-group is Instead fakeroot
       - name: dpkg deb  build
