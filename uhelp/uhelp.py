@@ -527,7 +527,7 @@ def main():
             \n  [dim][italic]case If use other people's table data additional to own data[/][/]\
             \n              ")
 
-            ynways = Prompt.ask("which restore ways choose? 1 = update / 2 = upsert", choices=["1", "2"])
+            ynways = Prompt.ask("which restore ways choose? 1 = restore / 2 = partial", choices=["1", "2"])
 
             def askrestorepath():
                 # pathlib expanduser() understund home ~/
@@ -547,9 +547,7 @@ def main():
                         elif pag == "n":
                             lbexists = False
                             break
-                return LBP,lbexists
-
-
+                return LBP, lbexists
 
             if ynways == "1":  # simple overwrite usr table
 
@@ -558,20 +556,20 @@ def main():
 
                 CLBP = askrestorepath()
 
-
                 if CLBP[1]:
 
                     # restore function
                     usr.truncate()
-                    print(f"user table truncated. Number of registered items: {len(usr)}")
+                    console.print(f"user table [yellow]truncated.[/] Number of registered items: {len(usr)}")
 
                     # belows I want to use update instead of upsert,
                     # but the difference is whether I truncate or not, so I'll go with this for now
                     rt = jload(CLBP[0])
                     for i in range(len(rt)):
-                        aak = rt[i].keys()
-                        aav = rt[i].values()
-                        usr.upsert(rt[i], Query().aak==aav)
+                        cnm = rt[i]['command']
+                        usr.insert(rt[i])
+                        console.print(f"[green]{cnm}[/] is not exist. [blue]insert[/] ")
+
                     console.print(f"[blue]success restore usr table[/] {len(usr)=}")
 
                     console.print(f"[blue]restored usertable from {CLBP[0]} Number of registered items[/]: {len(usr)}")
@@ -585,22 +583,16 @@ def main():
                 User = Query()
                 rt = jload(CLBP[0])
 
-                """ example
-                # return dict
-                print(usr.search(Query()['command']==rt[0]['command']))
-                # return Bool q name==John style
-                print(usr.contains(Query()['command']==rt[0]['command']))
-                """
-
                 for i in range(len(rt)):
                     cnm = rt[i]['command']
                     if usr.contains(Query()['command']==rt[i]['command']):  # bool
                         console.print(f"[yellow]{cnm}[/] is exists. [red]skip[/]")
                     else:  # If the command name does not exist
                         # insert item
-                        console.print(f"[green]{cnm}[/] is not exists [blue]insert[/] ")
+                        usr.insert(rt[i])
+                        console.print(f"[green]{cnm}[/] is not exist. [blue]insert[/] ")
 
-                console.print(f"[blue]success restore usr table ([red]upsert method[/])[/] {len(usr)=}")
+                console.print(f"\n[blue]success restore usr table ([red]upsert method[/])[/] {len(usr)=}")
                 #print(usr.all())
 
             else:
