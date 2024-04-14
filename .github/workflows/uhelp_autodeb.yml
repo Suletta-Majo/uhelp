@@ -58,10 +58,10 @@ jobs:
 
       - name: Move the binary file to the deb package build directory
         run: |
-          ls -lh ./autodeb/uhelp*/
-          ls -lh ./autodeb/uhelp*/opt/
-          cp ./build/uhelp.bin ./autodeb/uhelp*/opt/uhelp/
-          mv ./autodeb/uhelp*/opt/uhelp/uhelp.bin ./autodeb/uhelp*/opt/uhelp/uhelp
+          cd build/
+          mv uhelp.bin uhelp
+          cd ..
+          mv ./build/uhelp ./autodeb/uhelp*/opt/uhelp/
 
       # --root-owner-group is Instead fakeroot
       - name: dpkg deb  build
