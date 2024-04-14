@@ -58,7 +58,8 @@ jobs:
 
       - name: Move the binary file to the deb package build directory
         run: |
-          ls -lh ./autodeb
+          ls -lh ./autodeb/uhelp*/
+          ls -lh ./autodeb/uhelp*/opt/
           cp ./build/uhelp.bin ./autodeb/uhelp*/opt/uhelp/
           mv ./autodeb/uhelp*/opt/uhelp/uhelp.bin ./autodeb/uhelp*/opt/uhelp/uhelp
 
