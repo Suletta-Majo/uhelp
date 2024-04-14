@@ -1,12 +1,11 @@
 ![uhelp banner](images/uhelp_banner.png)
 
-<h2 align="center"> Welcome to Your own help 👋</h2>
 <p>
 <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
   <img alt="Python" src="https://img.shields.io/badge/-Python-F2C63C.svg?logo=python&style=for-the-badge">
 </p>
-
 &nbsp;
+<table><tr><td><h1>W</h1></td><td>elcome to Your own help👋</td></table>
 > it show dictionaly your own wrote command usage and memo
 
 > *and if not assigned show Built-in dictionary*  
