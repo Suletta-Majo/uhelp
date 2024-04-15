@@ -29,7 +29,8 @@ pip install git+https://github.com/Suletta-Majo/uhelp.git
 ```  
 
 
-<h5>Ways 2</h5> using .deb  
+<h5>Ways 2</h5> deb package 
+
 *Download the latest release at the bottom that matches your computer's CPU architecture*  
 *Cannot be installed on Termux!Proot-Distro environment is possible*
 It is a deb package that uses the compiled Python source.
@@ -39,6 +40,7 @@ apt install ./uhelp-1.0.deb
 ```
 
 &nbsp;
+
 ## Usage
 
 If you install with pip, you can call it with `uh`,  
@@ -57,6 +59,7 @@ uhelp ls
 
 &nbsp;
 
+
 ### Edit your own help item
 ```
 uh -e [command name]
@@ -68,6 +71,7 @@ The text editor opens and you can edit it with reference to the description.
 ```
 uh -r [command name]
 ```
+
 
 #### Change Theme
 ```
@@ -102,6 +106,7 @@ Check out the UHelp dictionary for other options such as backups and restores.
 ***
 
 &nbsp;
+
 
 As a bonus feature, there is a function to take a short note before falling asleep
 
