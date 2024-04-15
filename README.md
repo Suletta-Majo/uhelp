@@ -8,8 +8,8 @@
 ![uhelp banner](images/uhelp_banner.png)
 
 
-<img src="images/wellcome.svg" width="100%" />  
-and memo
+<img src="images/wellcome2.svg" width="100%" />  
+next strings here here here
 
 > it show dictionaly your own wrote command usage and memo
 > *and if not assigned show Built-in dictionary*  
