@@ -8,6 +8,9 @@
 ![uhelp banner](images/uhelp_banner.png)
 
 
+<img src="images/wellcome.svg" width="100%" />  
+and memo
+
 > it show dictionaly your own wrote command usage and memo
 > *and if not assigned show Built-in dictionary*  
 > *You can also search for an excellent community base cheat sheet [tldr](https://tldr.sh)*  
