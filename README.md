@@ -1,13 +1,13 @@
-![uhelp banner](images/uhelp_banner.png)
-
-<h2 align=center>Welcome to Your own help 👋</h2>
 <p>
 <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
   <img alt="Python" src="https://img.shields.io/badge/-Python-F2C63C.svg?logo=python&style=for-the-badge">
 </p>
-&nbsp;
-> it show dictionaly your own wrote command usage and memo
 
+<h2 align=center>Welcome to Your own help 👋</h2>  
+![uhelp banner](images/uhelp_banner.png)
+
+
+> it show dictionaly your own wrote command usage and memo
 > *and if not assigned show Built-in dictionary*  
 > *You can also search for an excellent community base cheat sheet [tldr](https://tldr.sh)*  
 > *and you can also set it to be displayed at the same time as your own.*  
