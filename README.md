@@ -4,6 +4,7 @@
 </p>
 
 <h2 align=center>Welcome to Your own help 👋</h2>  
+
 ![uhelp banner](images/uhelp_banner.png)
 
 
@@ -56,9 +57,6 @@ uhelp ls
 
 &nbsp;
 
-&nbsp;
-
-
 ### Edit your own help item
 ```
 uh -e [command name]
@@ -90,6 +88,7 @@ default
 
 
 
+
 ### Tldr viwer Mode
 ```
 uh -t [command name]
@@ -97,9 +96,10 @@ uh -t [command name]
 Command help mode using only TLDR pages
 
 
-***
-
 Check out the UHelp dictionary for other options such as backups and restores.
+
+
+***
 
 &nbsp;
 
