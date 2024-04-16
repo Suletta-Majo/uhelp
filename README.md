@@ -8,7 +8,7 @@
 ![uhelp banner](images/uhelp_banner.png)
 
 
-<img src="images/wellcome8.svg" alt="wellcome to your own help. it show dictionaly your own wrote command usage" width="100%" />  
+<img src="images/wellcome9.svg" alt="wellcome to your own help. it show dictionaly your own wrote command usage" width="100%" />  
 
 > *You can also search for an excellent community base cheat sheet [tldr](https://tldr.sh)*  
 > *and you can also set it to be displayed at the same time as your own.*  
@@ -39,7 +39,19 @@ It is a deb package that uses the compiled Python source.
 apt install ./uhelp-1.0.deb
 ```
 
-&nbsp;
+  
+<details>
+
+<summary>*Do not install the PIP version and the DEB version together.*</summary>
+
+##### conflict
+
+Both are a method of starting the program by creating a symbolic link with the same name(uh) in usr/bin.  
+
+So it is possible that one will not start.
+
+</details>
+  
 
 ## Usage
 
@@ -133,9 +145,10 @@ To view choose on  prompt 'no'
 Give a ⭐️ if this project helped you!  
 
 
-
-appendix: [A very useful tools used to create this page!!](appendix.md)  
   
 
 ***
+
+appendix: [A very useful tools used to create this page!!](appendix.md)  
+ 
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
