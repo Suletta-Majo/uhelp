@@ -8,7 +8,7 @@
 ![uhelp banner](images/uhelp_banner.png)
 
 
-<img src="images/wellcome9.svg" alt="wellcome to your own help. it show dictionaly your own wrote command usage" width="100%" />  
+<img src="images/welcome9.svg" alt="wellcome to your own help. it show dictionaly your own wrote command usage" width="100%" />  
 
 > *You can also search for an excellent community base cheat sheet [tldr](https://tldr.sh)*  
 > *and you can also set it to be displayed at the same time as your own.*  
