@@ -15,7 +15,7 @@
 
 
 ## NOTE : *Now Making*  
-> **I don't have an x86_64 computer at hand, so I can't check the operation of the package, 
+> **I don't have an x86_64 computer at hand, so I can't check the operation of the package,  
 > **so I would appreciate it if you could report that it doesn't work..**  
 
 &nbsp;
@@ -60,7 +60,7 @@ So it is possible that one will not start.
 If you install with pip, you can call it with `uh`,  
 and if you install deb with apt, you can call it with `uh` or `uhelp`.
 
-show your command reference below example `ls`
+show your command reference example below in case `ls`  
 
 ```sh
 uh ls
@@ -78,7 +78,9 @@ uhelp ls
 ```
 uh -e [command name]
 ```
-The text editor opens and you can edit it with reference to the description.
+The text editor opens and you can edit it with reference to the description.  
+
+*I would like to include a description of the tags that can be used later here as well.*  
 
 
 ### Remove your own help item
