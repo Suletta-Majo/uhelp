@@ -15,8 +15,8 @@
 
 
 ## NOTE : *Now Making*  
-> **The package has not been completed yet for Packaging, please wait.**  
-> *If you want to try it even if it's not a compiled package, please try the explanation a little ahead* **pip from git method**
+> **I don't have an x86_64 computer at hand, so I can't check the operation of the package, 
+> **so I would appreciate it if you could report that it doesn't work..**  
 
 &nbsp;
 ## Install  
@@ -32,7 +32,8 @@ pip install git+https://github.com/Suletta-Majo/uhelp.git
 <h5>Ways 2</h5> deb package 
 
 *Download the latest release at the bottom that matches your computer's CPU architecture*  
-*Cannot be installed on Termux!Proot-Distro environment is possible*
+*Cannot be installed on Termux!Proot-Distro environment is possible*  
+
 It is a deb package that uses the compiled Python source.
 
 ```sh
@@ -40,6 +41,7 @@ apt install ./uhelp-1.0.deb
 ```
 
   
+
 <details>
 
 <summary>*Do not install the PIP version and the DEB version together.*</summary>
@@ -112,7 +114,7 @@ uh -t [command name]
 Command help mode using only TLDR pages
 
 
-Check out the UHelp dictionary for other options such as backups and restores.
+Check out the uhelp dictionary for other options such as backups and restores.`uh uhelp`
 
 
 ***
