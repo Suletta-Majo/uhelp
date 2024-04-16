@@ -14,8 +14,8 @@
 > *and you can also set it to be displayed at the same time as your own.*  
 
 
-## NOTE : *Now Making*  
-> **I don't have an x86_64 computer at hand, so I can't check the operation of the package,  
+#### NOTE : *Now Making*  
+> **I don't have an x86_64 computer at hand, so I can't check the operation of the package,**  
 > **so I would appreciate it if you could report that it doesn't work..**  
 
 &nbsp;
