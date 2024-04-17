@@ -13,6 +13,7 @@
 > *You can also search for an excellent community base cheat sheet [tldr](https://tldr.sh)*  
 > *and you can also set it to be displayed at the same time as your own.*  
 
+  
 
 #### NOTE : *Now Making*  
 > **I don't have an x86_64 computer at hand, so I can't check the operation of the package,**  
