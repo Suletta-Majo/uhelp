@@ -11,6 +11,9 @@ However, it is unclear whether my programming/github skill can be corrected 🎉
 
 ### TODO idea list
 
+Make the prompt screens that appear in various places a little easier to see  
+
+
 A function that suggests a list close to what you have entered? hmm
 ```sh
 uhelp -list a
