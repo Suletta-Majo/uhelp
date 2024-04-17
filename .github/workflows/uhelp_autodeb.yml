@@ -7,10 +7,6 @@ on:
 
 jobs:
 
-  defaults:
-    run:
-      shell: bash
-
   build:
 
     runs-on: ubuntu-latest
@@ -117,19 +113,21 @@ jobs:
           sleep 0.5
           uh uhelp > retro2.txt
 
+      - name: testremove
+        run: |
+          echo y | uh -r uhelp
+          sleep 0.5
+
 
       - name: backup
         run: |
-          echo y | uh -b backup > bk.txt
+          echo y | uh -b backup
+          sleep 0.5
           ls ~/
 
 
       - name: tldr test
-        run: uh -t grep > gr.txt
-
-
-      - name: tar.gz outputs
-        run: tar cvzf testtxt.tar.gz gr.txt retro2.txt sleep.txt uhout.txt
+        run: uh -t grep
 
 
       - name: Upload Artifact
@@ -138,5 +136,9 @@ jobs:
           name: uhelp-artifact
           path: |
             uh*.deb
-            testtxt.tar.gz
+          name: smemo
+          path: |
+            /opt/uhelp/smemo.txt
+            /opt/uhelp/uhelp.ini
+            ~/*.json
 
