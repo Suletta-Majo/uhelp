@@ -103,7 +103,7 @@ jobs:
           sleep 0.5
           echo y | uhelp -s hello world!
           sleep 0.5
-          echo n | uhelp -s i am check
+          echo n | uhelp -s i am check > sleep.txt
           sleep 0.5
 
 
@@ -111,22 +111,26 @@ jobs:
         run: |
           uh -v retro2
           sleep 0.5
-          uh uhelp
+          uh uhelp > retro2.txt
 
 
       - name: backup
         run: |
-          echo y | uh -b backup
+          echo y | uh -b backup > bk.txt
           ls ~/
 
 
       - name: tldr test
-        run: uh -t grep
+        run: uh -t grep > gr.txt
+
+
+      - name: tar.gz outputs
+        run: tar cvzf testtxt.tar.gz gr.txt retro2.txt sleep.txt uhout.txt
 
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: uhelp-artifact
-          path: uh*.deb
+          path: uh*.deb testtxt.tar.gz
 
