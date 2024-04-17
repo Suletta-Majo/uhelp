@@ -7,7 +7,7 @@ jobs:
 
 
   call-myworkflow:
-    uses: uhelp/.github/workflows/uhelp_autodeb.yml@main
+    uses: ./.github/workflows/uhelp_autodeb.yml@main
     secrets:
       GH_TOKEN: ${{ secrets.PERSONAL_PRIV_TOKEN }}
 
