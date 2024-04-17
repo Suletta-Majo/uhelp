@@ -69,7 +69,7 @@ jobs:
 
       - name: install uhelp and check directory
         run: |
-          apt install ./uh*.deb && ls /opt/uhelp
+          sudo apt install ./uh*.deb && ls /opt/uhelp
           echo "________________________________________"
           whereis uh
 
