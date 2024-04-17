@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
       call-workflow:
-        uses: ${{ secrets.PERSONAL_PRIV_TOKEN }}@github.com/Suletta-Majo/uhelp/.github/workflows/uhelp_autodeb.yml@v1
+        uses: github.com/Suletta-Majo/uhelp/.github/workflows/uhelp_autodeb.yml@v1
+        secrets:
+          envPAT: ${{ secrets.PERSONAL_PRIV_TOKEN }}
 
       - name: install uhelp and check directory
         run: |
