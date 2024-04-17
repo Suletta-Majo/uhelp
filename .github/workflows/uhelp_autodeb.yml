@@ -136,7 +136,10 @@ jobs:
           name: uhelp-artifact
           path: |
             uh*.deb
-          name: smemo
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: myartifacts
           path: |
             /opt/uhelp/smemo.txt
             /opt/uhelp/uhelp.ini
