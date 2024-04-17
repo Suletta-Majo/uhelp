@@ -5,14 +5,15 @@ on:
 
 jobs:
 
+
+  call-myworkflow:
+    uses: uhelp/.github/workflows/uhelp_autodeb.yml@main
+    secrets:
+      GH_TOKEN: ${{ secrets.PERSONAL_PRIV_TOKEN }}
+
   testrun:
 
     runs-on: ubuntu-latest
-
-      call-workflow:
-        uses: Suletta-Majo/uhelp/.github/workflows/uhelp_autodeb.yml@main
-        secrets:
-          envPAT: ${{ secrets.PERSONAL_PRIV_TOKEN }}
 
       - name: install uhelp and check directory
         run: |
