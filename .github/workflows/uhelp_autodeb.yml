@@ -7,10 +7,6 @@ on:
 
 jobs:
 
-  defaults:
-    run:
-      shell: bash
-
   build:
 
     runs-on: ubuntu-latest
