@@ -68,6 +68,63 @@ jobs:
       - name: dpkg deb  build
         run: dpkg-deb --root-owner-group --build autodeb/uhelp*/ .
 
+      - name: install uhelp and check directory
+        run: |
+          apt install ./uh*.deb && ls /opt/uhelp
+          echo "________________________________________"
+          whereis uh
+
+      - name: checklist1
+        run: |
+          uhelp ls && uh ls > uhout.txt
+
+      - name: checklist2
+        run: |
+          echo y | uhelp -s sleep time
+          sleep 0.5
+          echo y | uhelp -s i am sleep
+          sleep 0.5
+          echo y | uhelp -s good night
+          sleep 0.5
+          echo y | uhelp -s hello world
+          sleep 0.5
+          echo y | uhelp -s sleep time again
+          sleep 0.5
+          echo y | uhelp -s good night again
+          sleep 0.5
+          echo y | uhelp -s hello
+          sleep 0.5
+          echo y | uhelp -s sleep
+          sleep 0.5
+          echo y | uhelp -s good night!
+          sleep 0.5
+          echo y | uhelp -s morning!
+          sleep 0.5
+          echo y | uhelp -s sleep note test
+          sleep 0.5
+          echo y | uhelp -s hello world!
+          sleep 0.5
+          echo n | uhelp -s i am check
+          sleep 0.5
+
+
+      - name: checklist3
+        run: |
+          uh -v retro2
+          sleep 0.5
+          uh uhelp
+
+
+      - name: backup
+        run: |
+          echo y | uh -b backup
+          ls ~/
+
+
+      - name: tldr test
+        run: uh -t grep
+
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
