@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
       call-workflow:
-        uses: github.com/Suletta-Majo/uhelp/.github/workflows/uhelp_autodeb.yml@main
+        uses: Suletta-Majo/uhelp/.github/workflows/uhelp_autodeb.yml@main
         secrets:
           envPAT: ${{ secrets.PERSONAL_PRIV_TOKEN }}
 
