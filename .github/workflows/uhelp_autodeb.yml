@@ -132,5 +132,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: uhelp-artifact
-          path: uh*.deb testtxt.tar.gz
+          path: |
+            uh*.deb
+            testtxt.tar.gz
 
