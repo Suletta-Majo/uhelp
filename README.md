@@ -36,10 +36,13 @@ pip install git+https://github.com/Suletta-Majo/uhelp.git
 *Cannot be installed on Termux!Proot-Distro environment is possible*  
 
 It is a deb package that uses the compiled Python source.  
-Please rewrite the X.X.X part to Version or specify it with a wildcard like UHelp*.deb  
+
+
+Please Make the X.X.X_\*\*\*\*\* part the same as the downloaded filename  
+or specify it with a wildcard like uhelp*.deb  
 
 ```sh
-apt install ./uhelp-x.x.x.deb
+apt install ./uhelp_X.X.X_*****.deb
 ```
 
   
@@ -87,20 +90,24 @@ The text editor opens and you can edit it with reference to the description.
 
 <summary>*About Tags Available for Editing*</summary>
 
-I think it's possible to specify the basic textual/rich,  
-like [blue][/blue] or [#ffffff on blue][/]  
+it's possible to specify the basically textual/rich tag syntax,  
+like \[blue][/blue] or \[#ffffff on blue][/]  
+
+
+The tags that are likely to be used in uhelp are defined in the rich\_theme\_manager directory included with the program.  
+\[codez], \[warning] .etc
 
 </details> 
 
 
 ### Remove your own help item
-```
+```sh
 uh -r [command name]
 ```
 
 
 #### Change Theme
-```
+```sh
 uh -v [theme name]
 ```
 Now you can choose from 5 options: default, retro, retro2, simple, fruits
@@ -120,10 +127,10 @@ default
 
 
 ### Tldr viwer Mode
-```
+```sh
 uh -t [command name]
 ```
-Command help mode using only TLDR pages
+Command help mode using only [tldr pages](https://tldr.sh)
 
 
 Check out the uhelp dictionary for other options such as backups and restores.`uh uhelp`
