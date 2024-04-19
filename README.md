@@ -124,7 +124,7 @@ default
 | ![simple style](images/simple_style.png)| ![fruits style](images/fruits_style.png)|  
 
 
-
+&nbsp;  
 
 ### Tldr viwer Mode
 ```sh
