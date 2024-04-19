@@ -5,11 +5,11 @@
 I just made it with a smartphone, so it works properly and I haven't been able to test it on PC.  
 GitHub Action's my workflow intends to build a deb package of x64, a CPU architecture that I don't have  
 I've never been able to test it, so if it doesn't work, I'd appreciate it if you could report it to the issue.  
-However, it is unclear whether my programming/github skill can be corrected 🎉  
+Whether or not I can solve the problem with my programming skills is another matter.
 
 
 
-### TODO idea list
+### TODO&IDEA list
 
 Make the prompt screens that appear in various places a little easier to see  
 
