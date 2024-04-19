@@ -3,7 +3,7 @@
   <img alt="Python" src="https://img.shields.io/badge/-Python-F2C63C.svg?logo=python&style=for-the-badge">
 </p>
 
-<h1 align=center> uhelp</h1>  
+<h1 align=center>uhelp</h1>  
 
 ![uhelp banner](images/uhelp_banner.png)
 
@@ -35,10 +35,11 @@ pip install git+https://github.com/Suletta-Majo/uhelp.git
 *Download the latest release at the bottom that matches your computer's CPU architecture*  
 *Cannot be installed on Termux!Proot-Distro environment is possible*  
 
-It is a deb package that uses the compiled Python source.
+It is a deb package that uses the compiled Python source.  
+Please rewrite the X.X.X part to Version or specify it with a wildcard like UHelp*.deb  
 
 ```sh
-apt install ./uhelp-1.0.deb
+apt install ./uhelp-x.x.x.deb
 ```
 
   
@@ -80,8 +81,16 @@ uhelp ls
 uh -e [command name]
 ```
 The text editor opens and you can edit it with reference to the description.  
+  
 
-*I would like to include a description of the tags that can be used later here as well.*  
+<details>  
+
+<summary>*About Tags Available for Editing*</summary>
+
+I think it's possible to specify the basic textual/rich,  
+like [blue][/blue] or [#ffffff on blue][/]  
+
+</details> 
 
 
 ### Remove your own help item
