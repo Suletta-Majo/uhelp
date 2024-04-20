@@ -22,7 +22,13 @@
 &nbsp;
 ## Install  
 
-<h5>Ways 1</h5> using pip (from this repository) 
+<h5>Ways 1</h5> using pip (PYPI / from this repository) 
+  
+
+```sh
+pip install uhelp
+```  
+
 
 Package and install directly from this repository with pip  
 ```sh
