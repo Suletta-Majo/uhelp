@@ -96,11 +96,11 @@ The text editor opens and you can edit it with reference to the description.
 
 <summary>*About Tags Available for Editing*</summary>
 
-it's possible to specify the basically textual/rich tag syntax,  
+it's possible to specify the basically [textual/rich](https://rich.readthedocs.io/en/stable/markup.html) console markup tag syntax,  
 like \[blue][/blue] or \[#ffffff on blue][/]  
 
 
-The tags that are likely to be used in uhelp are defined in the rich\_theme\_manager directory included with the program.  
+The tags that are likely to be used in uhelp are defined in the [rich\_theme\_manager](https://pypi.org/project/rich-theme-manager/) directory included with the program.  
 \[codez], \[warning] .etc
 
 </details> 
