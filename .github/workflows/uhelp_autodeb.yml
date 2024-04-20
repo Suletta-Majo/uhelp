@@ -76,7 +76,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: uhelp_$RELEASE_VERSION_x64
+          name: uhelp_${{ env.RELEASE_VERSION }}_x64
           path: |
             uh*.deb
 
