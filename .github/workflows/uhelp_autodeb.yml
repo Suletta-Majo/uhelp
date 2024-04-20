@@ -29,6 +29,12 @@ jobs:
           architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
 
 
+      - name: requir modules
+        run: |
+          pip ConfigUpdater
+          pip install rich
+          pip install rich-theme-manager
+
       - name: create deb package build directory
         run: |
           mkdir compile
