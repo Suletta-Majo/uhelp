@@ -31,7 +31,7 @@ jobs:
 
       - name: requir modules
         run: |
-          pip ConfigUpdater
+          pip install ConfigUpdater
           pip install rich
           pip install rich-theme-manager
 
