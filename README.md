@@ -126,7 +126,8 @@ uh -v [theme name]
 Now you can choose from 5 options: default, retro, retro2, simple, fruits
 
 
-| default                              | cyber                                 |                                      | -------------------------------------| ------------------------------------- |
+| default                              | cyber                                 |
+| -------------------------------------| ------------------------------------- |
 |![default style](images/default_style.png)| ![cyber style](images/cyber_style.png)|  
 
 | retro                                | retro2                                |
