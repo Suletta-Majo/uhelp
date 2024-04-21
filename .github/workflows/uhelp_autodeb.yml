@@ -3,6 +3,7 @@ name: uhelp_deb_pack
 on:
   release:
     types: [published]
+  workflow_dispatch:
 
 jobs:
 
@@ -78,4 +79,13 @@ jobs:
           name: uhelp_${{ env.RELEASE_VERSION }}_x64
           path: |
             uh*.deb
+
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            uhelp*x64.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

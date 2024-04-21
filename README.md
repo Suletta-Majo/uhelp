@@ -39,7 +39,7 @@ pip install git+https://github.com/Suletta-Majo/uhelp.git
 <h5>Ways 2</h5> deb package 
 
 *Download the latest release at the bottom that matches your computer's CPU architecture*  
-*Cannot be installed on Termux!Proot-Distro environment is possible*  
+*Cannot be installed on Termux!* [proot-istro](https://github.com/termux/proot-distro) *environment is possible*  
 
 It is a deb package that uses the compiled Python source.  
 
