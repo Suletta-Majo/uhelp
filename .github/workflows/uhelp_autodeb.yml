@@ -1,7 +1,8 @@
 name: uhelp_deb_pack
 
 on:
-  release:                                                     types: [published]
+  release:
+    types: [published]
 
 jobs:
 
