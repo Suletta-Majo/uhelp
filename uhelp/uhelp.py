@@ -46,7 +46,7 @@ def main():
 
     # Choosing a path when building a .deb or pip package
     # python(one directory) or deb(deb package style) or pip(module dir)
-    pathtype = "pip"
+    pathtype = "python"
 
     # for adjust pip or binary compile path
     if pathtype == "python":
@@ -304,6 +304,46 @@ def main():
                 "markdown.h7": Style(italic=True, dim=True),
                 "markdown.link": Style(color="bright_blue"),
                 "markdown.link_url": Style(color="blue", underline=True),
+            },
+        ),
+        Theme(
+            name="cyber",
+            description="cyber mode theme",
+            tags=["cyberterm"],
+            styles={
+                "title": "green",
+                "usage": "green",
+                "strong": "bold red",
+                "info": "dim cyan",
+                "warning": "bold magenta",
+                "danger": "bold red",
+                "info2": Style(color="#22863a", bold=True),
+                "foot": "#DDDCD3",
+                "codez": "#000000 on green",
+                "markdown.paragraph": Style(),
+                "markdown.text": Style(),
+                "markdown.em": Style(italic=True),
+                "markdown.emph": Style(italic=True),  # For commonmark backwards compatibility
+                "markdown.strong": Style(bold=True),
+                "markdown.code": "#000000 on green",
+                "markdown.code_block": "#000000 on green",
+                "markdown.block_quote": Style(color="green"),
+                "markdown.list": Style(color="green"),
+                "markdown.item": Style(),
+                "markdown.item.bullet": Style(color="#A0FA20", bold=True),
+                "markdown.item.number": Style(color="#A0FA20", bold=True),
+                "markdown.hr": Style(color="green"),
+                "markdown.h1.border": Style(),
+                "markdown.h1": Style(bold=True),
+                "markdown.h2": Style(bold=True, underline=True),
+                "markdown.h3": Style(bold=True),
+                "markdown.h4": Style(bold=True, dim=True),
+                "markdown.h5": Style(underline=True),
+                "markdown.h6": Style(italic=True),
+                "markdown.h7": Style(italic=True, dim=True),
+                "markdown.link": Style(color="bright_green"),
+                "markdown.link_url": Style(color="green", underline=True),
+
             },
         ),
         Theme(
@@ -611,7 +651,7 @@ def main():
         return
 
     #jload()
-    #urestore()  # upsert success
+    #urestore()
 
 
     def vstyle_change(chv):
@@ -622,7 +662,7 @@ def main():
 
         console.rule(f'[bold #A6BFC8]Change Output Style[/] [#C7A252]<[/][#123456 on #C7A252]{chv}[/]', style='#A6BFC8')
 
-        if chv == 'default' or chv == 'retro' or chv == 'retro2' or chv == 'simple' or chv == 'fruits':
+        if chv == 'default' or chv == 'retro' or chv == 'retro2' or chv == 'simple' or chv == 'fruits' or chv == 'cyber':
                 
             updater = ConfigUpdater()
             updater.read(init_path)
@@ -958,6 +998,58 @@ def main():
                     bdoc,
                             )
                 console.print(table)
+
+                if whit == 0:
+                    console.print(f"your database - total:{len(usr)}", ".", justify="right", style='foot', highlight=False)
+                elif whit == 1:
+                    console.print(f"\n \[basic dictionary] - total:{len(bas)}", ".", justify="right", style='foot', highlight=False)
+                elif whit == 3:  # tldr mode
+                    console.print(f"\n \[from tldr {resdict}]", ".", justify="right", style='foot', highlight=False)
+
+                else:  # whit2 for sleepmemo
+                    #console.print(Panel(bdoc, style='usage',   title=adoc, title_align='left'))
+                    pass
+
+
+            case 'cyber':  # here not hardcort bas/usr this is good and not confliction when irregular usage
+                logging.debug("output format is cyber")
+
+                dtheme = theme_manager.get("retroterminal")
+                console = Console(theme=dtheme)
+
+                # To optimize borders on the screen
+                dhit = console.height
+                dwiz = console.width
+
+
+                if dwiz < 60:
+                    bdmax = dwiz
+                elif dwiz >= 60:
+                    bdmax = 60
+
+                def adjbd(spc):
+                    bord = ""
+                    for i in range(spc):
+                        bord += "_"
+                    return bord
+
+                print(adjbd(5))
+
+                if whit == 0:
+                    ftdb = "YOUR DAT"
+                    ftln = f"{len(usr)}"
+                elif whit == 1:
+                    ftdb = "BASIC DAT"
+                    ftln = f"{len(bas)}"
+                elif whit == 3:  # tldr mode
+                    ftdb = "TLDR DAT"
+                    ftln = "P.A.G.ES"
+
+                console.print(f"[blue]  _______ [#DEB6F1]{adoc}[/#DEB6F1]___｡[/]")
+                console.print(f"[blue]_/_______________________________________[/]")
+                console.print(bdoc)
+                console.print(f"[blue]‰_________________________!.!.!___________∥ {ftdb}[/]")
+                console.print(f"[blue]                                  \\\\__:{ftln}[/]")
 
                 if whit == 0:
                     console.print(f"your database - total:{len(usr)}", ".", justify="right", style='foot', highlight=False)
