@@ -1027,13 +1027,13 @@ def main():
                 elif dwiz >= 60:
                     bdmax = 60
 
-                def adjbd(spc):
+                def adjbd(spc, cst):
                     bord = ""
                     for i in range(spc):
-                        bord += "_"
+                        bord += cst
                     return bord
 
-                print(adjbd(5))
+                # print(adjbd(5))
 
                 if whit == 0:
                     ftdb = "YOUR DAT"
@@ -1046,10 +1046,10 @@ def main():
                     ftln = "P.A.G.ES"
 
                 console.print(f"[blue]  _______ [#DEB6F1]{adoc}[/#DEB6F1]___｡[/]")
-                console.print(f"[blue]_/_______________________________________[/]")
+                console.print(f"[blue]_/{adjbd(bdmax-2, '_')}[/]")
                 console.print(bdoc)
-                console.print(f"[blue]‰_________________________!.!.!___________∥ {ftdb}[/]")
-                console.print(f"[blue]                                  \\\\__:{ftln}[/]")
+                console.print(f"[blue]‰{adjbd(bdmax-30, '_')}!.!.!___________∥ {ftdb}[/]")
+                console.print(f"[blue]{adjbd(bdmax-25, ' ')}\\\\__:{ftln}[/]")
 
                 if whit == 0:
                     console.print(f"your database - total:{len(usr)}", ".", justify="right", style='foot', highlight=False)
