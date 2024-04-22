@@ -311,28 +311,28 @@ def main():
             description="cyber mode theme",
             tags=["cyberterm"],
             styles={
-                "title": "green",
-                "usage": "green",
+                "title": "bold #EC85ED underline",
+                "usage": "#EF4868",
                 "strong": "bold red",
-                "info": "dim cyan",
+                "info": "#00FF7F",
                 "warning": "bold magenta",
                 "danger": "bold red",
                 "info2": Style(color="#22863a", bold=True),
                 "foot": "#DDDCD3",
-                "codez": "#000000 on green",
+                "codez": "#F1E266 on #3155A6",
                 "markdown.paragraph": Style(),
                 "markdown.text": Style(),
                 "markdown.em": Style(italic=True),
                 "markdown.emph": Style(italic=True),  # For commonmark backwards compatibility
                 "markdown.strong": Style(bold=True),
-                "markdown.code": "#000000 on green",
-                "markdown.code_block": "#000000 on green",
-                "markdown.block_quote": Style(color="green"),
-                "markdown.list": Style(color="green"),
+                "markdown.code": "#FFFFFF on blue",
+                "markdown.code_block": "#FFFFFF on blue",
+                "markdown.block_quote": Style(color="blue"),
+                "markdown.list": Style(color="blue"),
                 "markdown.item": Style(),
-                "markdown.item.bullet": Style(color="#A0FA20", bold=True),
+                "markdown.item.bullet": Style(color="blue", bold=True),
                 "markdown.item.number": Style(color="#A0FA20", bold=True),
-                "markdown.hr": Style(color="green"),
+                "markdown.hr": Style(color="blue"),
                 "markdown.h1.border": Style(),
                 "markdown.h1": Style(bold=True),
                 "markdown.h2": Style(bold=True, underline=True),
@@ -341,8 +341,8 @@ def main():
                 "markdown.h5": Style(underline=True),
                 "markdown.h6": Style(italic=True),
                 "markdown.h7": Style(italic=True, dim=True),
-                "markdown.link": Style(color="bright_green"),
-                "markdown.link_url": Style(color="green", underline=True),
+                "markdown.link": Style(color="bright_blue"),
+                "markdown.link_url": Style(color="blue", underline=True),
 
             },
         ),
@@ -833,7 +833,7 @@ def main():
         if multiple list then them strip to oneline string here
         :param str arg1: command name or date time
         :param str arg2: usage or memo
-        :param str arg3: 0 = usr hit / 1 = bas hit / 2 = non / 3= tldr
+        :param int arg3: 0 = usr hit / 1 = bas hit / 2 = non / 3= tldr
         """
 
         adoc = arg1
@@ -1014,7 +1014,7 @@ def main():
             case 'cyber':  # here not hardcort bas/usr this is good and not confliction when irregular usage
                 logging.debug("output format is cyber")
 
-                dtheme = theme_manager.get("retroterminal")
+                dtheme = theme_manager.get("cyber")
                 console = Console(theme=dtheme)
 
                 # To optimize borders on the screen
@@ -1045,11 +1045,13 @@ def main():
                     ftdb = "TLDR DAT"
                     ftln = "P.A.G.ES"
 
-                console.print(f"[blue]  _______ [#DEB6F1]{adoc}[/#DEB6F1]___｡[/]")
+
+
+                console.print(f"[blue]  _______[/][title]{adoc}[/][blue]___｡[/]")
                 console.print(f"[blue]_/{adjbd(bdmax-2, '_')}[/]")
                 console.print(bdoc)
-                console.print(f"[blue]‰{adjbd(bdmax-30, '_')}!.!.!___________∥ {ftdb}[/]")
-                console.print(f"[blue]{adjbd(bdmax-25, ' ')}\\\\__:{ftln}[/]")
+                console.print(f"[blue]‰{adjbd(bdmax-30, '_')}!.!.!___________∥ [#00FFFF]{ftdb}[/#00FFFF][/]")
+                console.print(f"[blue]{adjbd(bdmax-25, ' ')}\\\\__:[#00FFFF]{ftln}[/#00FFFF][/]")
 
                 if whit == 0:
                     console.print(f"your database - total:{len(usr)}", ".", justify="right", style='foot', highlight=False)
