@@ -35,6 +35,13 @@ Package and install directly from this repository with pip
 pip install git+https://github.com/Suletta-Majo/uhelp.git
 ```  
 
+*You may get an error because this repository have a lot of fine tldr dictionary files,  
+you may need the following config set extend Git buffer*  
+  
+git config --global http.postBuffer 524288000  
+  
+[link](https://stackoverflow.com/questions/6842687/the-remote-end-hung-up-unexpectedly-while-git-cloning)
+  
 
 <h5>Ways 2</h5> deb package 
 
@@ -118,8 +125,10 @@ uh -v [theme name]
 ```
 Now you can choose from 5 options: default, retro, retro2, simple, fruits
 
-default
-![default style](images/default_style.png)  
+
+| default                              | cyber                                 |
+| -------------------------------------| ------------------------------------- |
+|![default style](images/default_style.png)| ![cyber style](images/cyber_style.png)|  
 
 | retro                                | retro2                                |
 | -------------------------------------| ------------------------------------- |

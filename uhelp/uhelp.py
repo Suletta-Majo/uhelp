@@ -307,6 +307,46 @@ def main():
             },
         ),
         Theme(
+            name="cyber",
+            description="cyber mode theme",
+            tags=["cyberterm"],
+            styles={
+                "title": "bold #EC85ED underline",
+                "usage": "#EF4868",
+                "strong": "bold red",
+                "info": "#00FF7F",
+                "warning": "bold magenta",
+                "danger": "bold red",
+                "info2": Style(color="#22863a", bold=True),
+                "foot": "#DDDCD3",
+                "codez": "#F1E266 on #3155A6",
+                "markdown.paragraph": Style(),
+                "markdown.text": Style(),
+                "markdown.em": Style(italic=True),
+                "markdown.emph": Style(italic=True),  # For commonmark backwards compatibility
+                "markdown.strong": Style(bold=True),
+                "markdown.code": "#FFFFFF on blue",
+                "markdown.code_block": "#FFFFFF on blue",
+                "markdown.block_quote": Style(color="blue"),
+                "markdown.list": Style(color="blue"),
+                "markdown.item": Style(),
+                "markdown.item.bullet": Style(color="blue", bold=True),
+                "markdown.item.number": Style(color="#A0FA20", bold=True),
+                "markdown.hr": Style(color="blue"),
+                "markdown.h1.border": Style(),
+                "markdown.h1": Style(bold=True),
+                "markdown.h2": Style(bold=True, underline=True),
+                "markdown.h3": Style(bold=True),
+                "markdown.h4": Style(bold=True, dim=True),
+                "markdown.h5": Style(underline=True),
+                "markdown.h6": Style(italic=True),
+                "markdown.h7": Style(italic=True, dim=True),
+                "markdown.link": Style(color="bright_blue"),
+                "markdown.link_url": Style(color="blue", underline=True),
+
+            },
+        ),
+        Theme(
             name="mono",
             description="Monochromatic theme",
             tags=["mono", "colorblind"],
@@ -611,7 +651,7 @@ def main():
         return
 
     #jload()
-    #urestore()  # upsert success
+    #urestore()
 
 
     def vstyle_change(chv):
@@ -622,7 +662,7 @@ def main():
 
         console.rule(f'[bold #A6BFC8]Change Output Style[/] [#C7A252]<[/][#123456 on #C7A252]{chv}[/]', style='#A6BFC8')
 
-        if chv == 'default' or chv == 'retro' or chv == 'retro2' or chv == 'simple' or chv == 'fruits':
+        if chv == 'default' or chv == 'retro' or chv == 'retro2' or chv == 'simple' or chv == 'fruits' or chv == 'cyber':
                 
             updater = ConfigUpdater()
             updater.read(init_path)
@@ -793,7 +833,7 @@ def main():
         if multiple list then them strip to oneline string here
         :param str arg1: command name or date time
         :param str arg2: usage or memo
-        :param str arg3: 0 = usr hit / 1 = bas hit / 2 = non / 3= tldr
+        :param int arg3: 0 = usr hit / 1 = bas hit / 2 = non / 3= tldr
         """
 
         adoc = arg1
@@ -958,6 +998,60 @@ def main():
                     bdoc,
                             )
                 console.print(table)
+
+                if whit == 0:
+                    console.print(f"your database - total:{len(usr)}", ".", justify="right", style='foot', highlight=False)
+                elif whit == 1:
+                    console.print(f"\n \[basic dictionary] - total:{len(bas)}", ".", justify="right", style='foot', highlight=False)
+                elif whit == 3:  # tldr mode
+                    console.print(f"\n \[from tldr {resdict}]", ".", justify="right", style='foot', highlight=False)
+
+                else:  # whit2 for sleepmemo
+                    #console.print(Panel(bdoc, style='usage',   title=adoc, title_align='left'))
+                    pass
+
+
+            case 'cyber':  # here not hardcort bas/usr this is good and not confliction when irregular usage
+                logging.debug("output format is cyber")
+
+                dtheme = theme_manager.get("cyber")
+                console = Console(theme=dtheme)
+
+                # To optimize borders on the screen
+                dhit = console.height
+                dwiz = console.width
+
+
+                if dwiz < 60:
+                    bdmax = dwiz
+                elif dwiz >= 60:
+                    bdmax = 60
+
+                def adjbd(spc, cst):
+                    bord = ""
+                    for i in range(spc):
+                        bord += cst
+                    return bord
+
+                # print(adjbd(5))
+
+                if whit == 0:
+                    ftdb = "YOUR DAT"
+                    ftln = f"{len(usr)}"
+                elif whit == 1:
+                    ftdb = "BASIC DAT"
+                    ftln = f"{len(bas)}"
+                elif whit == 3:  # tldr mode
+                    ftdb = "TLDR DAT"
+                    ftln = "P.A.G.ES"
+
+
+
+                console.print(f"[blue]  _______[/][title]{adoc}[/][blue]___｡[/]")
+                console.print(f"[blue]_/{adjbd(bdmax-2, '_')}[/]")
+                console.print(bdoc)
+                console.print(f"[blue]‰{adjbd(bdmax-30, '_')}!.!.!___________∥ [#00FFFF]{ftdb}[/#00FFFF][/]")
+                console.print(f"[blue]{adjbd(bdmax-25, ' ')}\\\\__:[#00FFFF]{ftln}[/#00FFFF][/]")
 
                 if whit == 0:
                     console.print(f"your database - total:{len(usr)}", ".", justify="right", style='foot', highlight=False)

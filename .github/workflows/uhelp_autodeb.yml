@@ -81,11 +81,11 @@ jobs:
             uh*.deb
 
 
-      - name: Release
+      - name: .deb to Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            uhelp*x64.zip
+            uh*.deb
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
