@@ -1,5 +1,5 @@
 <p>
-<img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
+<img alt="Version" src="https://img.shields.io/badge/version-0.6.2-blue.svg?cacheSeconds=2592000" />
   <img alt="Python" src="https://img.shields.io/badge/-Python-F2C63C.svg?logo=python&style=for-the-badge">
 </p>
 
@@ -22,8 +22,10 @@
 &nbsp;
 ## Install  
 
-<h5>Ways 1</h5> using pip (PYPI / from this repository) 
+<h5>Ways 1</h5> using pip 
   
+
+normaly. from pypi  
 
 ```sh
 pip install uhelp
