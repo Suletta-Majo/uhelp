@@ -880,7 +880,7 @@ def main():
 
                     console.print(f"\n \[basic dictionary] - total:{len(bas)}", ".", justify="right", style='usage', highlight=False)
                 elif whit == 3:  # tldr mode
-                    console.print(Panel.fit(bdoc, style='usage',   title=adoc, title_align='left'))
+                    console.print(Panel.fit(bdoc, style='usage', title=adoc, title_align='left'))
                     console.print(f"\n \[from tldr {resdict}]", ".", justify="right", style='usage', highlight=False)
 
                 else:  # whit2 for sleepmemo
@@ -930,7 +930,7 @@ def main():
 
                 elif whit == 3:  # tldr mode
                     #ddoc = console.print(f"\n \[from tldr {resdict}]", ".", justify="right", style='title', highlight=False)
-                    ddoc = f"\n \[from tldr {resdict}]"
+                    ddoc = f"\[from tldr {resdict}]"
 
 
                 else:  # whit2 for sleepmemo
@@ -1194,8 +1194,8 @@ def main():
                         resdict = 'common'
                         # helpdocument from filename
                         with open(TG_CPATH, 'r') as f:
-                            rmd = f.read()
-                            md = Markdown(rmd)
+                            rmd = f.readlines()[2:]
+                            md = Markdown("".join(rmd))
                         #console.print(md)
                         formsout(args.targetstrings[0],md,3)
 
@@ -1203,8 +1203,8 @@ def main():
                         resdict = 'linux'
                         # helpdocument from filename
                         with open(TG_LPATH, 'r') as f:
-                            rmd = f.read()
-                            md = Markdown(rmd)
+                            rmd = f.readlines()[2:]
+                            md = Markdown("".join(rmd))
                         #console.print(md)
                         formsout(args.targetstrings[0],md,3)
 
@@ -1212,8 +1212,8 @@ def main():
                         resdict = 'android'
                         # helpdocument from filename
                         with open(TG_APATH, 'r') as f:
-                            rmd = f.read()
-                            md = Markdown(rmd)
+                            rmd = f.readlines()[2:]
+                            md = Markdown("".join(rmd))
                         #console.print(md)
                         formsout(args.targetstrings[0],md,3)
 
@@ -1294,8 +1294,8 @@ def main():
             resdict = 'common'
             # helpdocument from filename
             with open(TG_CPATH, 'r') as f:
-                rmd = f.read()
-                md = Markdown(rmd)
+                rmd = f.readlines()[2:]
+                md = Markdown("".join(rmd))
             #console.print(md)
             formsout(args.targetstrings[0],md,3)
 
@@ -1303,8 +1303,8 @@ def main():
             resdict = 'linux'
             # helpdocument from filename
             with open(TG_LPATH, 'r') as f:
-                rmd = f.read()
-                md = Markdown(rmd)
+                rmd = f.readlines()[2:]
+                md = Markdown("".join(rmd))
             #console.print(md)
             formsout(args.targetstrings[0],md,3)
 
@@ -1312,8 +1312,8 @@ def main():
             resdict = 'android'
             # helpdocument from filename
             with open(TG_APATH, 'r') as f:
-                rmd = f.read()
-                md = Markdown(rmd)
+                rmd = f.readlines()[2:]
+                md = Markdown("".join(rmd))
             #console.print(md)
             formsout(args.targetstrings[0],md,3)
 
