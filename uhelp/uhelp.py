@@ -930,7 +930,7 @@ def main():
 
                 elif whit == 3:  # tldr mode
                     #ddoc = console.print(f"\n \[from tldr {resdict}]", ".", justify="right", style='title', highlight=False)
-                    ddoc = f"\n \[from tldr {resdict}]"
+                    ddoc = f"\[from tldr {resdict}]"
 
 
                 else:  # whit2 for sleepmemo
