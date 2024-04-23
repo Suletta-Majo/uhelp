@@ -80,6 +80,9 @@ jobs:
           path: |
             uh*.deb
 
+      - name: ls -la
+        run: |
+          ls -larthF
 
       - name: .deb to Release
         uses: softprops/action-gh-release@v2

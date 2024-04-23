@@ -880,7 +880,7 @@ def main():
 
                     console.print(f"\n \[basic dictionary] - total:{len(bas)}", ".", justify="right", style='usage', highlight=False)
                 elif whit == 3:  # tldr mode
-                    console.print(Panel.fit(bdoc, style='usage',   title=adoc, title_align='left'))
+                    console.print(Panel.fit(bdoc, style='usage', title=adoc, title_align='left'))
                     console.print(f"\n \[from tldr {resdict}]", ".", justify="right", style='usage', highlight=False)
 
                 else:  # whit2 for sleepmemo
