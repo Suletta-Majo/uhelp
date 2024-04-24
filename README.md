@@ -1,6 +1,10 @@
 <p>
+
+<img alt="GitHub License" src="https://img.shields.io/github/license/Suletta-Majo/uhelp?labelColor=yellow&color=blue">
 <img alt="Version" src="https://img.shields.io/badge/version-0.6.2-blue.svg?cacheSeconds=2592000" />
   <img alt="Python" src="https://img.shields.io/badge/-Python-F2C63C.svg?logo=python&style=for-the-badge">
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Suletta-Majo/uhelp?labelColor=%23488894&color=%23F7C9D1">
+
 </p>
 
 <h1 align=center>uhelp</h1>  
