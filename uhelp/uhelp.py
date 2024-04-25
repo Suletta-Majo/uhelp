@@ -33,19 +33,12 @@ def main():
     main function
     setup.cfg pyproject.toml pip want this. case in console software
     """
-    # testing path inner pip package and open pettern
-    """
-    here = Path(__file__).parent
-    fname = here / "uhelp.json"
-    print(f"{here=}  {fname=}")
-    with fname.open() as f:
-        print(f"{f=}")
-        print("success open uhelp.json!")
-    """
 
-
+    #---------------------------------------------------
     # Choosing a path when building a .deb or pip package
     # python(one directory) or deb(deb package style) or pip(module dir)
+    # when cloned and pathtype `python` you can debug [ python3 ./uhelp.py ls] this app
+
     pathtype = "pip"
 
     # for adjust pip or binary compile path
@@ -85,11 +78,6 @@ def main():
         return  # how to finish main
 
 
-
-    # rich console instance with theme
-    #console = Console(theme=custom_theme)
-    #console = Console()
-
     # logging setting
     logging.basicConfig(level=logging.DEBUG)
 
@@ -104,13 +92,12 @@ def main():
     logging.disable(logging.CRITICAL)
 
 
-
     resdict = ""
 
 
     # TODO:let themes one by one commonise
 
-    # basic theme on built-in for test. planning is load thi  s from setuped theme directory
+    # basic theme on built-in for test. planning is load this from setuped theme directory
     THEMES = [
         Theme(
             name="terminal",
@@ -382,8 +369,6 @@ def main():
         ),
     ]
 
-                #"title": "bold #FAE9E8 on #9F66EA",Referenced pypi software glosslip
-
 
     def get_args():
         psr = argparse.ArgumentParser(
@@ -458,47 +443,6 @@ def main():
     # If you change this to bas, the edit function will work for the bas table
     target_table = usr
     logging.debug(f"{target_table=}")
-
-
-    def switch_test():
-        """
-        switch target table test
-        """
-        qu = Query()
-        print(f"table check 'uhelp' = {target_table.contains(qu.command == 'uhelp')}")
-        return 0
-
-    # switch_test()
-
-
-    def readdefdb():
-        """
-        open json and read it to python dictionary
-        dictionary to tinyDB table
-        """
-
-        with open('defdb.json') as f:
-            df = json.load(f)
-
-        pprint.pprint(df, width=40)
-        return 0
-
-
-    def dbzeroinit():
-        """
-        everytime reset database for test
-        """
-        global db
-        global bas
-        # database clear all
-        db.truncate()  # cant truncate table?
-        bas.truncate()  # clear database is need this
-        # set default data
-        # readdefdb() no available now
-        return 0
-
-    # db reset
-    #dbzeroinit()
 
 
     def jload(repath):  # what is this function? may be not need
@@ -650,9 +594,6 @@ def main():
 
         return
 
-    #jload()
-    #urestore()
-
 
     def vstyle_change(chv):
         """
@@ -691,7 +632,6 @@ def main():
 
     def editdata(edcmnd, edsrc=b"it is new blank data"):
         EDITOR = os.environ.get('EDITOR','vim')  # that easy!
-
 
         initial_message = b"# infomation how edit.  this comments are no need delete\n# you can decolate text like this. with used available them  e tag[info]hello[/info] world [warning]good morning  [/warning]\n# basicaly this app theme has [info][codez][warning][heavy][point]\n# [/]or[/info]  to close tag. when no c  lose tag then apply 1 line. if want bracket normally use [ ] please escape \\[something] like this\n# if already command registed. texts show below\n"  # if you want to set up the file somehow
 
@@ -1113,9 +1053,6 @@ def main():
                 logging.debug(f"{mpri=} print item list {mls=}")
 
 
-            #print(console.size)
-            #console.print(console.width)
-
             # exist check db
             logging.debug(f"exist check '{args.targetstrings[0]}' in bas table: {bas.contains(que.command == args.targetstrings[0])}")
             logging.debug(f"exist check '{args.targetstrings[0]}' in usr table: {usr.contains(que.command == args.targetstrings[0])}")
@@ -1289,7 +1226,6 @@ def main():
         TG_APATH = Path(TGA)
         rflag = False
 
-
         if TG_CPATH.exists():
             resdict = 'common'
             # helpdocument from filename
@@ -1345,12 +1281,8 @@ def main():
 
                 # sleep note is registory  max10. keep 10 column and delete 1st line
 
-                #mys = pathlib.Path("smemo.txt")
                 mys = sleep_path
                 mys.touch(exist_ok=True)  # if no file make file
-
-                # num_lines = sum(1 for line in open('smemo.txt'))
-                # this oneliner no need file close? idk so i used in below way
 
                 with open(sleep_path) as myfile:
                     num_lines = sum(1 for line in myfile)  # count lines in file
@@ -1385,15 +1317,12 @@ def main():
                 # let formout
                 for i in range(len(lines)):
                     if i < len(lines)-1:
-                        # print(f"{i=} {len(lines)=}")
-                        #print(lines[i][:19], "\n", lines[i][20:])
+
                         formsout(lines[i][:19], lines[i][20:].rstrip(), 2)
                     else:
-                        # print("mark latest function")
                         dt1 = datetime.strptime(lines[i][:19], '%Y-%m-%d %H:%M:%S')
                         dt2 = datetime.now()
                         td = dt2 - dt1
-                        # print(td)
                         atime = str(td)[:1]
                         if int(atime) >= 999:
                             atime = "999+"
@@ -1404,5 +1333,3 @@ def main():
 if __name__ == '__main__':
     main()
     #logging.debug("__main__ running")
-
-
