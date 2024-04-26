@@ -89,6 +89,3 @@ jobs:
         with:
           files: |
             uh*.deb
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
